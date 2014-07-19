@@ -12,9 +12,9 @@ public class GetRequest extends StreamToString {
 
 	public String getResponse(String url) throws MalformedURLException,
 			IOException {
-		// устанавливаем соединение
+		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРѕРµРґРёРЅРµРЅРёРµ
 		URLConnection conn = new URL(url).openConnection();
-		// читаем то, что отдал нам сервер
+		// С‡РёС‚Р°РµРј С‚Рѕ, С‡С‚Рѕ РѕС‚РґР°Р» РЅР°Рј СЃРµСЂРІРµСЂ
 		return readStreamToString(conn.getInputStream(), "UTF-8");
 	}
 

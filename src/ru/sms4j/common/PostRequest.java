@@ -25,11 +25,11 @@ public class PostRequest extends StreamToString {
 
 	public void setQuery(QueryString request) throws MalformedURLException,
 			IOException {
-		// устанавливаем соединение
+		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРѕРµРґРёРЅРµРЅРёРµ
 		URLConnection conn = new URL(getUrl()).openConnection();
-		// мы будем писать POST данные в out stream
+		// РјС‹ Р±СѓРґРµРј РїРёСЃР°С‚СЊ POST РґР°РЅРЅС‹Рµ РІ out stream
 		conn.setDoOutput(true);
-		// создаем поток
+		// СЃРѕР·РґР°РµРј РїРѕС‚РѕРє
 		OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream(),
 				"ASCII");
 		out.write(request.toString());
@@ -37,7 +37,7 @@ public class PostRequest extends StreamToString {
 		out.flush();
 		out.close();
 
-		// читаем то, что отдал нам сервер
+		// С‡РёС‚Р°РµРј С‚Рѕ, С‡С‚Рѕ РѕС‚РґР°Р» РЅР°Рј СЃРµСЂРІРµСЂ
 		this.response = readStreamToString(conn.getInputStream(), "UTF-8");
 	}
 
