@@ -1,4 +1,6 @@
 *.class
+.classpath
+.project
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
@@ -50,3 +52,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Folders
+.settings/
